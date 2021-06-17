@@ -1,0 +1,142 @@
+/datum/reagent/concentrate
+	id = "gaycon"
+	var/mood_bonus = 10
+
+/datum/reagent/concentrate/affect_ingest(var/mob/living/carbon/human/M, var/alien, var/removed)
+	for(var/datum/wish/concentrate/W in M.wishes)
+		if(W.name == "concentrate_wish")
+			M.add_event("concentrate", /datum/happiness_event/concentrate)
+			if(W.desired_concentrate == id)
+				M.add_event("desired_condentrate", /datum/happiness_event/desired_concentrate)
+
+
+
+/datum/reagent/concentrate/red_concentrate
+	name = "Red Concentrate"
+	id = "redcon"
+	description = "Red liquid."
+	taste_description = "red"
+	reagent_state = LIQUID
+	metabolism = REM * 5
+	color = "#FF0000"
+	mood_bonus = 20
+
+
+/datum/reagent/concentrate/red_concentrate/affect_ingest(var/mob/living/carbon/human/M, var/alien, var/removed)
+	..(M, alien, removed)
+	M.add_event("red_condentrate", /datum/happiness_event/red_concentrate)
+
+/datum/reagent/concentrate/blue_concentrate
+	name = "Blue Concentrate"
+	id = "bluecon"
+	description = "Blue liquid."
+	taste_description = "blue"
+	reagent_state = LIQUID
+	metabolism = REM * 5
+	color = "#0000FF"
+	mood_bonus = 10
+
+/datum/reagent/concentrate/green_concentrate
+	name = "Green Concentrate"
+	id = "greencon"
+	description = "Green liquid."
+	taste_description = "green"
+	reagent_state = LIQUID
+	metabolism = REM * 5
+	color = "#00FF00"
+	mood_bonus = 10
+
+/datum/reagent/concentrate/yellow_concentrate
+	name = "Yellow Concentrate"
+	id = "yellowcon"
+	description = "Yellow liquid."
+	taste_description = "yellow"
+	reagent_state = LIQUID
+	metabolism = REM * 5
+	color = "#FFFF00"
+	mood_bonus = 10
+
+
+/datum/reagent/blackliquid
+	name = "Black Liquid"
+	id = "blackliquid"
+	description = "Black liquid."
+	taste_description = "bitter"
+	reagent_state = LIQUID
+	color = "#030303"
+	metabolism = REM * 5
+
+/datum/reagent/blackliquid/distillate(var/amount)
+	holder.remove_reagent(id, amount, safety = 1)
+	holder.add_reagent("samognoygas", amount, safety = 1)
+
+/datum/reagent/blackliquid/touch_obj(var/obj/O)
+	O.samosbor = volume
+
+/datum/reagent/biomass
+	name = "Biomass"
+	id = "biomass"
+	description = "Looks like... slimy meat..."
+	taste_description = ""
+	reagent_state = LIQUID
+	color = "#E58EB2"
+	metabolism = REM * 5
+
+/datum/reagent/ethanol/samognoy/samognoy_gas
+	name = "Samognoy Gas"
+	id = "samognoygas"
+	description = "White steam"
+	taste_description = "samognoy"
+	reagent_state = GAS
+	color = "#FFFFFF"
+	spawn_temperature = T0C + 94
+
+/datum/reagent/ethanol/samognoy/samognoy_gas/condensate(var/amount)
+	holder.remove_reagent(id, amount, safety = 1)
+	holder.add_reagent("samognoy", amount, safety = 1)
+
+/datum/reagent/ethanol/samognoy
+	name = "Samognoy"
+	id = "samognoy"
+	description = "Кто выпил тот здохнет."
+	taste_description = "ethanol and raw meat"
+	reagent_state = LIQUID
+	color = "#404030"
+	touch_met = 5
+	druggy = 10
+	halluci = 30
+	quench_amount = 5
+
+	glass_name = "самогной"
+	glass_desc = "Странна&#255; черна&#255; жидкость."
+
+/datum/chemical_reaction/boil_blackliquid
+	name = "Boil blackliquid"
+	id = "boil_blackliquid"
+	result = "samognoygas"
+	required_reagents = list("blackliquid" = 1, "biomass" = 3)
+	temperature_min = T0C + 93
+	result_amount = 4
+	reaction_rate = HALF_LIFE(0)
+	mix_message = ""
+	reaction_sound = null
+
+/datum/chemical_reaction/boil_blackliquid/on_reaction(var/datum/reagents/holder, var/created_volume)
+	if(istype(holder.my_atom, /obj/item/weapon/reagent_containers/canister))
+		var/obj/item/weapon/reagent_containers/canister/C = holder.my_atom
+		if(C.beaker)
+			var/obj/item/weapon/reagent_containers/glass/beaker/banka/beaker = C.beaker
+			var/t = T0C + 40
+			holder.trans_id_to(beaker, "samognoygas", created_volume, force_temperature = t)
+			beaker.reagents.handle_reactions()
+
+/datum/chemical_reaction/condensate_samognoy_gas
+	name = "Condensate samognoy gas"
+	id = "condensate_samognoygas"
+	result = "samognoy"
+	required_reagents = list("samognoygas" = 1)
+	temperature_max = T0C + 90
+	result_amount = 1
+	reaction_rate = HALF_LIFE(0)
+	mix_message = ""
+	//reaction_sound = null
