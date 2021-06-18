@@ -123,7 +123,7 @@
 	var/end_word = min(first_word + allowed_words,words.len)
 	while(end_word != words.len) //skip ahead to the next punctuation mark so the sentence doesn't end mid-way.
 		var/W = words[end_word]
-		var/L = copytext(W,lentext(W))
+		var/L = copytext(W,length(W))
 
 		var/list/connectors = list("and","or","to", "also", "then", "so", "but", "either", "yet")
 		var/punctuation = ":.,;!?"
