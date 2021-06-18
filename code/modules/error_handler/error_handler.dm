@@ -4,19 +4,34 @@ var/list/error_last_seen = list()
 var/list/error_cooldown = list()
 var/total_runtimes = 0
 var/total_runtimes_skipped = 0
+var/last_seen = null
 // The ifdef needs to be down here, since the error viewer references total_runtimes
 #ifdef DEBUG
 /world/Error(var/exception/e, var/datum/e_src)
 	if(!istype(e)) // Something threw an unusual exception
 		log_to_dd("\[[time_stamp()]] Uncaught exception: [e]")
 		return ..()
-	if(!error_last_seen) // A runtime is occurring too early in start-up initialization
+	if(!error_last_seen || istype(error_last_seen, /list)) // A runtime is occurring too early in start-up initialization
+		//error_last_seen = list()
 		return ..()
 	total_runtimes++
 
-	var/erroruid = "[e.file][e.line]"
-	var/last_seen = error_last_seen[erroruid]
+	var/erroruid = "[e.file]:[e.line]"
+	to_world_log("\n## DEBUG: erroruid: \"[erroruid]\"")
+
+	to_world_log("## DEBUG: error_last_seen: \"[error_last_seen]\"")
+	try
+		last_seen = error_last_seen[erroruid] || world.time  // will throw a "bad index" error
+	catch(var/exception/ee)
+		// file and line info is available if you enable debugging
+		to_world_log("\[[time_stamp()]] Runtime in \"[ee.file]:[ee.line]\": [ee]")
+		return ..()
+
+	to_world_log("## DEBUG: last_seen: \"[last_seen]\"")
 	var/cooldown = error_cooldown[erroruid] || 0
+	to_world_log("## DEBUG: cooldown: \"[cooldown]\"")
+	shutdown
+
 	if(last_seen == null) // A new error!
 		error_last_seen[erroruid] = world.time
 		last_seen = world.time
@@ -39,7 +54,7 @@ var/total_runtimes_skipped = 0
 			var/skipcount = abs(error_cooldown[erroruid]) - 1
 			error_cooldown[erroruid] = 0
 			if(skipcount > 0)
-				log_to_dd("\[[time_stamp()]] Skipped [skipcount] runtimes in [e.file],[e.line].")
+				log_to_dd("\[[time_stamp()]] Skipped [skipcount] runtimes in \"[e.file]:[e.line]\".")
 				error_cache.logError(e, skipCount = skipcount)
 	error_last_seen[erroruid] = world.time
 	error_cooldown[erroruid] = cooldown
@@ -95,7 +110,7 @@ var/total_runtimes_skipped = 0
 		desclines += "  (This error will now be silenced for [ERROR_SILENCE_TIME / 600] minutes)"
 
 	// Now to actually output the error info...
-	log_to_dd("\[[time_stamp()]] Runtime in [e.file],[e.line]: [e]")
+	log_to_dd("\[[time_stamp()]] Runtime in \"[e.file]:[e.line]\": [e]")
 	for(var/line in desclines)
 		log_to_dd(line)
 	if(error_cache)

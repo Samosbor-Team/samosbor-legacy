@@ -179,7 +179,7 @@
 
 
 /obj/machinery/power/apc/init()
-	warning("APC INIT [world.time]")
+	warning("APC Initialization started ([world.time])")
 	wires = new(src)
 
 	// offset 24 pixels in direction of dir
@@ -204,14 +204,14 @@
 		src.update_icon()
 
 	..()
-	warning("APC INIT END [world.time]")
+	warning("APC Initialization ended ([world.time])")
 	init_upd()
 
 /obj/machinery/power/apc/proc/init_upd()
-	warning("APC INIT UPD [world.time]")
+	warning("APC Initialization update started ([world.time])")
 	if(operating)
 		src.update()
-	warning("APC INIT UPD END [world.time]")
+	warning("APC Initialization update ended ([world.time])")
 
 /obj/machinery/power/apc/Destroy()
 	src.update()
