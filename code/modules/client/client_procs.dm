@@ -352,5 +352,5 @@ client/verb/character_setup()
 		prefs.ShowChoices(usr)
 
 /client/proc/apply_fps(var/client_fps)
-	if(world.byond_version >= 511 && byond_version >= 511 && client_fps >= CLIENT_MIN_FPS && client_fps <= CLIENT_MAX_FPS)
+	if(world.byond_version >= 513 && byond_version >= 513 && client_fps >= CLIENT_MIN_FPS && client_fps <= CLIENT_MAX_FPS)
 		vars["fps"] = prefs.clientfps

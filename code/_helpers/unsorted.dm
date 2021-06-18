@@ -54,7 +54,7 @@
 	dx=(32*end.x+end.pixel_x)-(32*start.x+start.pixel_x)
 	if(!dy)
 		return (dx>=0)?90:270
-	.=arctan(dx/dy)
+	.=_arctan(dx/dy)
 	if(dy<0)
 		.+=180
 	else if(dx<0)
@@ -511,9 +511,11 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/between(var/low, var/middle, var/high)
 	return max(min(middle, high), low)
 
-proc/arctan(x)
+
+proc/_arctan(x)
 	var/y=arcsin(x/sqrt(1+x*x))
 	return y
+
 
 //returns random gauss number
 proc/GaussRand(var/sigma)

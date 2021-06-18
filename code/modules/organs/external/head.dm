@@ -20,7 +20,7 @@
 	var/can_intake_reagents = 1
 	var/eye_icon = "eyes_s"
 	var/has_lips
-	var/list/teeth_list() = list()
+	var/list/teeth_list
 	var/max_teeth = 32
 	var/eye_icon_location = 'icons/mob/human_face.dmi'
 
