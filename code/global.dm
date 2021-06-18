@@ -151,7 +151,7 @@ var/list/robot_module_types = list(
 // Some scary sounds.
 var/static/list/scarySounds = list(
 	'sound/effects/clownstep1.ogg',
-	'sound/effects/clownstep2.ogg'
+	'sound/effects/clownstep2.ogg',
 	'sound/effects/Glassbr1.ogg',
 	'sound/effects/Glassbr2.ogg',
 	'sound/effects/Glassbr3.ogg',
