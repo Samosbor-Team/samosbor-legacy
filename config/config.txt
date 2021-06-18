@@ -163,7 +163,7 @@ VOTE_AUTOGAMEMODE_TIMELEFT 100
 DEFAULT_NO_VOTE
 
 ## Allow ghosts to see antagonist through AntagHUD
-#ALLOW_ANTAG_HUD
+ALLOW_ANTAG_HUD
 
 ## If ghosts use antagHUD they are no longer allowed to join the round.
 ANTAG_HUD_RESTRICTED
@@ -395,13 +395,13 @@ GENERATE_ASTEROID
 
 ## Uncomment to enable map voting; you'll need to use the script at tools/server.sh or an equivalent for it to take effect
 ## You'll also likely need to enable WAIT_FOR_SIGUSR1 below
-# MAP_SWITCHING
+MAP_SWITCHING
 
 ## Uncomment to enable an automatic map vote and switch at end of round. MAP_SWITCHING must also be enabled.
 # AUTO_MAP_VOTE
 
 ## Uncomment to make Dream Daemon refuse to reboot for any reason other than SIGUSR1
-# WAIT_FOR_SIGUSR1
+WAIT_FOR_SIGUSR1
 
 ## Uncomment to enable auto-stealthing staff who are AFK for more than specified minutes
 # AUTOSTEALTH 30

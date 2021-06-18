@@ -8,5 +8,6 @@
 # not_a_user - Admin
 
 robbastard - Host
-joctopus - Host
 qwertyo55 - Host
+gesugaosan - Host
+Armolitskiy - Host
