@@ -175,9 +175,8 @@ json_reader
 				i++
 
 		read_string(delim)
-			var
-				escape 	= FALSE
-				val		= ""
+			var/escape 	= FALSE
+			var/val		= ""
 			while(++i <= length(json))
 				var/char = get_char()
 				if(escape)

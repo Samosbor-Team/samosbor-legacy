@@ -104,9 +104,9 @@
 	for(var/datum/wish/W in wishes)
 		var/check_result = W.check()
 		switch(check_result)
-			if(1):
+			if(1)
 				W.success()
-			if(2):
+			if(2)
 				W.fail()
 
 /mob/living/carbon/human/proc/HalfDecay()

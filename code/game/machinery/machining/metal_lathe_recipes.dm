@@ -64,7 +64,7 @@
 
 /datum/metal_lathe/recipe/wire
 	name = "Cable coil"
-	path = /obj/item/stack/cable_coil/30
+	path = /obj/item/stack/cable_coil //30
 	category = "General"
 
 /datum/metal_lathe/recipe/fork

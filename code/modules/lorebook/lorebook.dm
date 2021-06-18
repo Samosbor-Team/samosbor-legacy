@@ -20,8 +20,8 @@
 
 	unique = 1	//kinda needed to prevent people writing into it
 
-	var read_time = 5			//Length of each reading sessions, in seconds.
-	var word_per_minute = 250	//Base reading speed at int = 10
+	var/read_time = 5			//Length of each reading sessions, in seconds.
+	var/word_per_minute = 250	//Base reading speed at int = 10
 
 	var/datum/book_chapter/current_chapter = null
 	var/list/chapters = list()

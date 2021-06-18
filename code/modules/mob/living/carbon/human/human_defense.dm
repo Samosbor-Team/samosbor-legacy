@@ -311,7 +311,7 @@ meteor_act
 			src.visible_message("<span class='danger'>[user] slices [src]'s throat!</span>")
 		else
 			src.visible_message("<span class='danger'>[user] slices open [src]'s [affecting.artery_name] artery!</span>")
-	
+
 	//Next tendon, which disables the limb, but does not remove it, making it easier to fix, and less lethal, than losing it.
 	else if(I.sharp && (I.sharpness * 2) && !(affecting.status & ORGAN_TENDON_CUT) && affecting.has_tendon)//Yes this is the same exactly probability again. But I'm running it seperate because I don't want the two to be exclusive.
 		affecting.sever_tendon()
@@ -650,7 +650,7 @@ meteor_act
 				src.throw_at(target, rand(1,3), src.throw_speed)
 			if(user.lying)
 				to_chat(user, too_high_message)
-					return
+				return
 
 		if(BP_MOUTH)//If we aim for the mouth then we kick their teeth out.
 			if(lying)
