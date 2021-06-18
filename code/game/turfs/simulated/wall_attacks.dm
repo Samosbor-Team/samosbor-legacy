@@ -1,5 +1,5 @@
-#define ZONE_BLOCKED 2
-#define AIR_BLOCKED 1
+//#define ZONE_BLOCKED 2 // Check "code/__defines/ZAS.dm"
+//#define AIR_BLOCKED 1 // Check "code/__defines/ZAS.dm"
 //Interactions
 /turf/simulated/wall/proc/toggle_open(var/mob/user)
 
@@ -40,8 +40,6 @@
 	can_open = WALL_CAN_OPEN
 	update_icon()
 
-#undef ZONE_BLOCKED
-#undef AIR_BLOCKED
 
 /turf/simulated/wall/proc/update_air()
 	if(!air_master)
@@ -368,3 +366,7 @@
 		else
 			visible_message("<span class='danger'>\The [user] attacks \the [src] with \the [W], but it bounces off!</span>")
 		return
+
+
+//#undef ZONE_BLOCKED // Check "code/__defines/ZAS.dm"
+//#undef AIR_BLOCKED // Check "code/__defines/ZAS.dm"

@@ -275,7 +275,7 @@
 
 
 
-#define SIGN(X) ((X<0)?-1:1)
+//#define SIGN(X) ((X<0)?-1:1) // Check "code/_helpers/game.dm"
 
 proc
 	inLineOfSight(X1,Y1,X2,Y2,Z=1,PX1=16.5,PY1=16.5,PX2=16.5,PY2=16.5)
@@ -307,7 +307,7 @@ proc
 				if(T.opacity)
 					return 0
 		return 1
-#undef SIGN
+//#undef SIGN // Check "code/_helpers/game.dm"
 
 proc/isInSight(var/atom/A, var/atom/B)
 	var/turf/Aturf = get_turf(A)

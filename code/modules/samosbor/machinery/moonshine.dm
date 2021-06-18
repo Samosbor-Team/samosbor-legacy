@@ -140,9 +140,9 @@
 			R.distillate(amount)
 
 	for(var/datum/reagent/R in reagents.reagent_list)
-		if(R.reagent_state == GAS)
+		if(R.reagent_state == GAS_STATE)
 			reagents.trans_id_to(beaker, R.id, R.volume)
 
 	for(var/datum/reagent/R in beaker.reagents.reagent_list)
-		if(R.reagent_state == GAS)
+		if(R.reagent_state == GAS_STATE)
 			R.condensate(R.volume)

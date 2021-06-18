@@ -242,3 +242,7 @@
 	icon_state_closed = "anesthetic_tank"
 	icon_state_open = "anesthetic_tank_open"
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
+
+
+#undef TANK_MAX_RELEASE_PRESSURE
+#undef TANK_DEFAULT_RELEASE_PRESSURE

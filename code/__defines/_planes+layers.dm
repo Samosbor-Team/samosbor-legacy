@@ -73,14 +73,14 @@ What is the naming convention for planes or layers?
 
 #define ABOVE_PLATING_PLANE          -20
 
-	#define HOLOMAP_LAYER        1 // NOTE: ENSURE this is equal to the one at ABOVE_TURF_PLANE!
-	#define DECAL_PLATING_LAYER  2
-	#define DISPOSALS_PIPE_LAYER 3
-	#define LATTICE_LAYER        4
-	#define PIPE_LAYER           5
-	#define WIRE_LAYER           6
-	#define WIRE_TERMINAL_LAYER  7
-	#define ABOVE_WIRE_LAYER     8
+	#define HOLOMAP_PLATING_LAYER 1 // NOTE: ENSURE this is equal to the one at ABOVE_TURF_PLANE!
+	#define DECAL_PLATING_LAYER   2
+	#define DISPOSALS_PIPE_LAYER  3
+	#define LATTICE_LAYER         4
+	#define PIPE_LAYER            5
+	#define WIRE_LAYER            6
+	#define WIRE_TERMINAL_LAYER   7
+	#define ABOVE_WIRE_LAYER      8
 
 #define TURF_PLANE				-19
 
@@ -161,7 +161,7 @@ What is the naming convention for planes or layers?
 #define LIGHTING_PLANE 			       -2 // For Lighting. - The highest plane (ignoring all other even higher planes)
 
 	#define LIGHTBULB_LAYER        0
-	#define LIGHTING_LAYER         1
+	//#define LIGHTING_LAYER         1 // Check "code/__defines/lighting.dm"
 	#define ABOVE_LIGHTING_LAYER   2
 	#define SUPER_PORTAL_LAYER     3
 	#define NARSIE_GLOW            4

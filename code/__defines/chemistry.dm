@@ -10,7 +10,7 @@
 
 #define SOLID 1
 #define LIQUID 2
-#define GAS 3
+#define GAS_STATE 3
 
 #define REAGENTS_OVERDOSE 30
 

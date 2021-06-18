@@ -150,7 +150,7 @@
 	if(anchored)
 		return FALSE
 
-	if((locate(/obj/structure/disposalpipe/up) in below) || locate(/obj/machinery/atmospherics/pipe/zpipe/up in below))
+	if((locate(/obj/structure/disposalpipe/up) in below) || locate(/obj/machinery/atmospherics/pipe/zpipe/up) in below)
 		return FALSE
 
 /atom/movable/proc/handle_fall(var/turf/landing)

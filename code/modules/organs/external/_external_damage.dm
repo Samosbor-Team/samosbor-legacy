@@ -76,7 +76,7 @@
 				createwound( BRUISE, brute )
 		if(burn)
 			if(laser)
-				createwound( LASER, burn )
+				createwound( LASER_MUT, burn )
 			else
 				createwound( BURN, burn )
 	else

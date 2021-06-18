@@ -715,3 +715,7 @@ var/global/datum/controller/occupations/job_master
 
 /datum/controller/occupations/proc/GetJobByType(var/job_type)
 	return occupations_by_type[job_type]
+
+#undef GET_RANDOM_JOB
+#undef BE_ASSISTANT
+#undef RETURN_TO_LOBBY

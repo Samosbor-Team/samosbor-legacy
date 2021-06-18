@@ -17,3 +17,5 @@
 	src.price = price
 	src.display_color = color
 	src.category = category
+
+#undef CAT_HIDDEN

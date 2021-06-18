@@ -310,7 +310,7 @@
 #undef LL_ROOM_WIDTH
 #undef LL_HEIGHT
 #undef LL_WIDTH
-#undef LL_OFFSET
+//#undef LL_OFFSET
 #undef NORTH
 #undef SOUTH
 #undef EAST

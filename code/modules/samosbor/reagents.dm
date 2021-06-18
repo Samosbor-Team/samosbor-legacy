@@ -87,7 +87,7 @@
 	id = "samognoygas"
 	description = "White steam"
 	taste_description = "samognoy"
-	reagent_state = GAS
+	reagent_state = GAS_STATE
 	color = "#FFFFFF"
 	spawn_temperature = T0C + 94
 
