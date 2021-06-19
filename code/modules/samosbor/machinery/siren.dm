@@ -1,6 +1,6 @@
 /obj/machinery/samosbor_siren
 	name = "siren"
-	icon = 'icons/samosbor/machinery.dmi'
+	icon = 'icons/samosbor/obj/machinery.dmi'
 	icon_state = "siren0"
 	var/radius = 200
 	var/sound/siren_sound = 'sound/samosbor/siren.ogg'

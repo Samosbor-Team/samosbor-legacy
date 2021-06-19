@@ -1,6 +1,6 @@
 /turf/simulated/concrete_raw
 	name = "raw concrete"
-	icon = 'icons/samosbor/turfs.dmi'
+	icon = 'icons/samosbor/turf/turfs.dmi'
 	icon_state = "concrete_raw"
 	var/finished = 0
 
@@ -25,7 +25,7 @@
 
 /turf/simulated/wall/concrete_wall
 	name = "concrete wall"
-	icon = 'icons/samosbor/turfs.dmi'
+	icon = 'icons/samosbor/turf/turfs.dmi'
 	icon_state = "concretewall"
 	var/bodyinside = 0
 
@@ -33,7 +33,7 @@
 	..()
 	name = "concrete wall"
 	desc = "Засохша&#255; бетонна&#255; преграда, холодна&#255; и шершава&#255; на ощупь."
-	icon = 'icons/samosbor/turfs.dmi'
+	icon = 'icons/samosbor/turf/turfs.dmi'
 	icon_state = "concretewall"
 
 /turf/simulated/wall/concrete_wall/Entered(var/mob/living/M)

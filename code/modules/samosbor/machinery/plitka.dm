@@ -1,6 +1,6 @@
 /obj/item/weapon/gas_tank
 	name = "gas tank"
-	icon = 'icons/samosbor/moonshine.dmi'
+	icon = 'icons/samosbor/obj/moonshine.dmi'
 	icon_state = "gas"
 	density = 0
 	var/amount = 500
@@ -12,7 +12,7 @@
 
 /obj/machinery/space_heater/plitka
 	name = "plitka"
-	icon = 'icons/samosbor/moonshine.dmi'
+	icon = 'icons/samosbor/obj/moonshine.dmi'
 	density = 0
 	var/obj/item/weapon/gas_tank/gas = null
 	var/energy = 500

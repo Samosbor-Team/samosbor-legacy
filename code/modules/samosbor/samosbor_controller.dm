@@ -3,21 +3,21 @@ var/global/datum/controller/process/samosbor/Samosbor = null
 /datum/controller/process/samosbor
 	var/list/datum/turf_collection/processingTurfs = list()
 	var/list/datum/turf_collection/samosborTurfs = list()
-	var/min_couldown = 1600				//Минимальный кулдаун
-	var/max_couldown = 16000			//Максимальный кулдаун
-	var/presamosbor_duration = 1200		//Время чтобы добежать до укрытия
-	var/next_samosbor = 0				//Когда начнётся новый самосбор
-	var/samosbor_duration_min = 600		//Минимальная продолжительность самосбора
-	var/samosbor_duration_max = 1800	//Максимальная продолжительность самосбора
-	var/samosbor_stop = 0	//Когда самосбор закончится
-	var/samosbor_running = 0	//Идёт самосбор
-	var/samosbor_level = 5
-	var/samosbor_damage = 100
+	var/min_couldown          = 1600   //Минимальный кулдаун
+	var/max_couldown          = 16000  //Максимальный кулдаун
+	var/presamosbor_duration  = 1200   //Время чтобы добежать до укрытия
+	var/next_samosbor         = 0      //Когда начнётся новый самосбор
+	var/samosbor_duration_min = 600    //Минимальная продолжительность самосбора
+	var/samosbor_duration_max = 1800   //Максимальная продолжительность самосбора
+	var/samosbor_stop       = 0        //Когда самосбор закончится
+	var/samosbor_running    = 0        //Идёт самосбор
+	var/samosbor_level      = 5
+	var/samosbor_damage     = 100
 	var/samosbor_start_time = 0
-	var/end_presamosbor = 0
-	var/list/z_levels = list(5, 6, 7, 8, 9, 10, 11, 12, 13, 14)	//Список z-уровней на которых происходит самосбор
-	var/global_samosbor = 1
-	var/triggered_siren = 0
+	var/end_presamosbor     = 0
+	var/list/z_levels       = list(5, 6, 7, 8, 9, 10, 11, 12, 13, 14)  //Список z-уровней на которых происходит самосбор
+	var/global_samosbor     = 1
+	var/triggered_siren     = 0
 
 
 /proc/StartSamosbor()
@@ -111,7 +111,7 @@ var/global/datum/controller/process/samosbor/Samosbor = null
 
 /datum/controller/process/samosbor/proc/AffectTurf(var/turf/T, first=0)
 	for(var/atom/A in T.contents)
-		if(!first)	
+		if(!first)
 			A.samosbor += schedule_interval * 0.1 * samosbor_damage
 		A.samosbor_act()
 

@@ -31,7 +31,7 @@
 	minbodytemp = 0
 	speed = 4
 
-	icon = 'icons/samosbor/creatures.dmi'
+	icon = 'icons/samosbor/mob/creatures.dmi'
 	icon_state = "heavy"
 
 	faction = "samosbor"

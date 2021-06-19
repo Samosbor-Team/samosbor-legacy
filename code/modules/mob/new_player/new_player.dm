@@ -58,7 +58,7 @@
 
 	output += "</div>"
 
-	panel = new(src, "реплхмюк буд-13","реплхмюк буд-13", 210, 280, src)
+	panel = new(src, "TERMINAL VHD-13", "TERMINAL VHD-13", 210, 280, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()

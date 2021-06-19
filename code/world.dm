@@ -1,6 +1,6 @@
 #define WORLD_ICON_SIZE 32
 
-/var/server_name = "KaiserBay"
+/var/server_name = "Samosbor"
 
 /var/game_id = null
 /hook/global_init/proc/generate_gameid()

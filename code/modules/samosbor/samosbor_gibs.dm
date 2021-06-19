@@ -1,6 +1,6 @@
 /obj/effect/decal/cleanable/samosbor_gibs
 	name = "strange substance"
-	icon = 'icons/samosbor/creatures.dmi'
+	icon = 'icons/samosbor/mob/creatures.dmi'
 	icon_state = "gibs1"
 	var/volume = 50
 	var/list/can_transform_into = list(/mob/living/simple_animal/hostile/samosbor/heavy)

@@ -1,6 +1,6 @@
 /obj/item/weapon/solderer
 	name = "welding tool"
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "crypto"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
@@ -18,7 +18,7 @@
 
 /obj/item/pripoy
 	name = "pripoy"
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "pripoy_full"
 	var/amount = 20
 
@@ -47,4 +47,3 @@
 			playsound(src.loc, 'sound/items/Welder2.ogg', 50, 1)
 			update_icon()
 
-	

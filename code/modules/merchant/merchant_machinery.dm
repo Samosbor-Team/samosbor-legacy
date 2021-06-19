@@ -1,7 +1,7 @@
 /obj/merchpad_net
 	name = "TERM"
 	desc = "Trade elevator radio module."
-	icon = 'icons/samosbor/machinery.dmi'
+	icon = 'icons/samosbor/obj/machinery.dmi'
 	icon_state = "antena"
 	anchored = 1
 	density = 0

@@ -12,7 +12,7 @@
 	var/burn_power_usage = 150
 	anchored = 1
 	density = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "forge_2"
 	name = "industrial furnace"
 	desc = "Печь КГСХ-15819."
@@ -34,7 +34,7 @@
 /obj/ind_furnace_part
 	density = 1
 	anchored = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = ""
 
 /obj/ind_furnace_part/part1
@@ -309,7 +309,7 @@
 /obj/structure/ind_pipe
 	anchored = 1
 	density = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "pipe"
 	name = "industrial pipe"
 	desc = "Труба."
@@ -320,7 +320,7 @@
 	idle_power_usage = 20
 	anchored = 1
 	density = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "forming-off"
 	name = "industrial metal-forming machine"
 	desc = "Устройство 819."
@@ -549,7 +549,7 @@
 	idle_power_usage = 40
 	anchored = 1
 	density = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "cooler_1"
 	name = "industrial cooling machine"
 	desc = "Охлаждающа&#255; установка КБЗ-04."
@@ -564,7 +564,7 @@
 /obj/ind_cooler_part
 	density = 1
 	anchored = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "cooler_2"
 
 
@@ -712,7 +712,7 @@
 	idle_power_usage = 10
 	anchored = 1
 	density = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = "makeform_1"
 	name = "industrial form-making machine"
 	desc = "Печь дл&#255; отливки форм ЗГС*825."
@@ -744,7 +744,7 @@
 /obj/ind_makeform_part
 	density = 1
 	anchored = 1
-	icon = 'icons/samosbor/zavod.dmi'
+	icon = 'icons/samosbor/obj/zavod.dmi'
 	icon_state = ""
 
 /obj/ind_makeform_part/part2

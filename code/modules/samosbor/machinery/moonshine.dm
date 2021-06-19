@@ -1,13 +1,13 @@
 /obj/item/weapon/reagent_containers/glass/beaker/banka
 	name = "Banka"
-	icon = 'icons/samosbor/moonshine.dmi'
+	icon = 'icons/samosbor/obj/moonshine.dmi'
 	icon_state = "banka"
 
 /obj/item/weapon/reagent_containers/glass/beaker/banka/update_icon()
 	overlays.Cut()
 
 	if(reagents.total_volume)
-		var/image/filling = image('icons/samosbor/moonshine.dmi', src, "[icon_state]10")
+		var/image/filling = image('icons/samosbor/obj/moonshine.dmi', src, "[icon_state]10")
 
 		var/percent = round((reagents.total_volume / volume) * 100)
 		switch(percent)
@@ -27,12 +27,12 @@
 
 /obj/item/weapon/cooper_pipe
 	name = "Cooper pipe"
-	icon = 'icons/samosbor/moonshine.dmi'
+	icon = 'icons/samosbor/obj/moonshine.dmi'
 	icon_state = "truba"
 
 /obj/item/weapon/reagent_containers/canister
 	name = "Canister"
-	icon = 'icons/samosbor/moonshine.dmi'
+	icon = 'icons/samosbor/obj/moonshine.dmi'
 	icon_state = "canister00"
 	density = 0
 	anchored = 0

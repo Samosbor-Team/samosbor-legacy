@@ -1,6 +1,6 @@
 /obj/item/device/radio/intercom/old_radio
 	name = "radio"
-	icon = 'icons/samosbor/machinery.dmi'
+	icon = 'icons/samosbor/obj/machinery.dmi'
 	icon_state = "radio0"
 
 /obj/item/device/radio/intercom/old_radio/attackby(obj/item/weapon/W as obj, mob/user as mob)

@@ -49,14 +49,14 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	                               //Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
 	                               //This is probably a lot longer explanation than it needs to be.
 
-	var/station_name  = "ПГС ГХ №10395013"
+	var/station_name  = "ПГС ГХ №10395013" // "RBT PGS GX nom. 10395013"
 	var/station_short = "ГХ"
 	var/dock_name     = "Elevator"
 	var/boss_name     = "Unknown"
 	var/boss_short    = "Administration'"
-	var/company_name  = "Unknown"
-	var/company_short = "UNK"
-	var/system_name = "Mist"
+	var/company_name  = "Коммунистическая Партия Гигахруща" //"Communist Party Gigakhrushcha"
+	var/company_short = "КПГХ" //"CPGK"
+	var/system_name   = "Mist"
 
 	var/map_admin_faxes = list()
 
