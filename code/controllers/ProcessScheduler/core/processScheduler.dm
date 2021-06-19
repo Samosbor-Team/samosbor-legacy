@@ -360,10 +360,10 @@ var/global/datum/controller/processScheduler/processScheduler
 	//timeAllowance = world.tick_lag * min(1, 0.5 * ((200/max(1,cpuAverage)) - 1))
 	timeAllowance = min(timeAllowanceMax, max(0, timeAllowance + timeAllowanceDelta))
 
-	if(error)
-		del error
-	if(timeAllowanceDelta)
-		del timeAllowanceDelta
+	// if(error)
+	// 	qdel (error)
+	// if(timeAllowanceDelta)
+	// 	qdel (timeAllowanceDelta)
 
 /datum/controller/processScheduler/proc/statProcesses()
 	if(!isRunning)

@@ -1,14 +1,15 @@
 {
     "recommendations": [
-        "wwm.better-align",
-        "gbasood.byond-dm-language-support",
-        "crowdin.vscode-crowdin",
-        "platymuus.dm-langclient",
-        "editorconfig.editorconfig",
-        "eamodio.gitlens",
         "andreabbondanza.ignoregit",
+        "crowdin.vscode-crowdin",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "gbasood.byond-dm-language-support",
         "ms-ceintl.vscode-language-pack-ru",
+        "platymuus.dm-langclient",
         "shan.code-settings-sync",
-        "visualstudioexptteam.vscodeintellicode"
+        "ss13.byond",
+        "visualstudioexptteam.vscodeintellicode",
+        "wwm.better-align",
     ]
 }
