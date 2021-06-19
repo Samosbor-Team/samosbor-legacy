@@ -7,7 +7,7 @@
 	..()
 
 /datum/event_of_round/proc/announce_event()
-	to_world("<h1 class='alert'>€а —обытие раунда:</h1>")
+	to_world("<h1 class='alert'>—обытие раунда:</h1>")
 	to_world("<br>[event_message]<br>")
 	return
 
@@ -16,7 +16,7 @@
 
 /*datum/event_of_round/stolen_airlocks
 	id = "stolenairlocks"
-	event_message = "¬се шлюзы были украдены и заменены на обычные двери коммунистами дл€€ равноправи€€ на этой станции!"
+	event_message = "¬се шлюзы были украдены и заменены на обычные двери коммунистами дл€ равноправи€ на этой станции!"
 
 /datum/event_of_round/stolen_airlocks/apply_event()
 	for(var/obj/machinery/door/airlock/A in station_airlocks)
@@ -27,7 +27,7 @@
 
 /datum/event_of_round/without_light
 	id = "withoutlight"
-	event_message = "»з-за аномалий в ионосфере станци€€ остаЄтс€€ без освещени€€."
+	event_message = "»з-за аномалий в ионосфере станци€ остаЄтс€ без освещени€."
 
 /datum/event_of_round/without_light/apply_event()
 	lightsout(0,0)
@@ -37,4 +37,4 @@
 
 /datum/event_of_round/mom_i_wont_die
 	id = "momiwontdie"
-	event_message = "—егодн€€ особенно не хочетс€€ умирать."
+	event_message = "—егодн€ особенно не хочетс€ умирать."

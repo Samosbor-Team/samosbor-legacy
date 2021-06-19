@@ -77,7 +77,7 @@ var/global/datum/controller/gameticker/ticker
 			if(pregame_timeleft <= 0 || ((initialization_stage & INITIALIZATION_NOW_AND_COMPLETE) == INITIALIZATION_NOW_AND_COMPLETE))
 				current_state = GAME_STATE_SETTING_UP
 	while (!setup())
-	
+
 /datum/controller/gameticker/proc/InitMerchNet()
 	for(var/obj/merchpad_net/N in world)
 		N.Init()
@@ -516,7 +516,7 @@ var/global/datum/controller/gameticker/ticker
 								HG.current.client.plus_honor(1)
 								HG.current.client.honor = HG.current.client.load_honor(ckey(HG.key))
 								honor_geheimpolizei += 1 //I'm not tested dis. UPD: this works properly
-	round_end_stats += "Тайнаяя полици&#255; получила <b><font color='red'>[honor_geheimpolizei]</font></b> чести за идеологически-неверных людей!\n"
+	round_end_stats += "Тайная полици&#255; получила <b><font color='red'>[honor_geheimpolizei]</font></b> чести за идеологически-неверных людей!\n"
 
 
 	to_world(round_end_stats)
@@ -606,17 +606,17 @@ var/global/datum/controller/gameticker/ticker
 		if(H.mob_ideology && H.mind.mind_ideology)
 			ideology_message = "<span class='notice'>Ты - верный последователь идеологии [H.mob_ideology.name],"
 			if(H.mob_ideology.has_leader)
-				ideology_message += " которую на станции возглавляяет [H.mob_ideology.station_leader.real_name], [H.mob_ideology.station_leader.mind.assigned_role]."
+				ideology_message += " которую на станции возглавляет [H.mob_ideology.station_leader.real_name], [H.mob_ideology.station_leader.mind.assigned_role]."
 			else
-				ideology_message += " у которой на станции нет лидера. Придетсяя выбрать его самим!"
+				ideology_message += " у которой на станции нет лидера. Придется выбрать его самим!"
 			ideology_message += "<br>"
 			if(H.mob_ideology.is_legal)
-				ideology_message += "[H.mob_ideology.name] абсолютно легален и его приверженцы не преследуютсяя по закону."
+				ideology_message += "[H.mob_ideology.name] абсолютно легален и его приверженцы не преследуются по закону."
 				if(H.mob_ideology == ideologies["Либерализм"])
 					ideology_message += ".. до тех пор, пока Кайзер не решит иначе."
 
-				ideology_message += " Ни в коем случае не вступай в контакт с последователяями Коммунизма, Фашизма и Либертарианства."
+				ideology_message += " Ни в коем случае не вступай в контакт с последователями Коммунизма, Фашизма и Либертарианства."
 			else
-				ideology_message += "[H.mob_ideology.name] яявляяетсяя запрещённой идеологией и её последователей строго карают. Ни в коем случае не разговаривай о ней с незнакомыми людьми, да и со знакомыми тоже не стоит - тайнаяя полицияя бдит."
+				ideology_message += "[H.mob_ideology.name] является запрещённой идеологией и её последователей строго карают. Ни в коем случае не разговаривай о ней с незнакомыми людьми, да и со знакомыми тоже не стоит - тайная полиция бдит."
 			ideology_message += "</span>"
 			to_chat(H, ideology_message)

@@ -1993,7 +1993,7 @@
 		if(area_followers >= round(active_followers * 0.75))
 			mob_ideology.initiate_elections(src, A)
 		else
-			to_chat(src, "<span class='alert'>Дляя того, чтобы выбрать нового лидера, необходимо нахождение в одной зоне как минимум 75% активных членов твоей идеологии.</span>")
+			to_chat(src, "<span class='alert'>Для того, чтобы выбрать нового лидера, необходимо нахождение в одной зоне как минимум 75% активных членов твоей идеологии.</span>")
 	else
 		to_chat(src, "<span class='alert'>Выборы уже начались!</span>")
 
