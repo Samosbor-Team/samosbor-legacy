@@ -11,10 +11,27 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"label": "dm: build - Samosbor.dme",
-            "presentation": {
-                "clear": true
-            }
+			"label": "Build All",
+			"presentation": {
+				"clear": true
+			}
+		},
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "code/controllers/ProcessScheduler/",
+			"problemMatcher": [],
+			"label": "npm: install - code/controllers/ProcessScheduler",
+			"detail": "install dependencies from package"
+		},
+		{
+			"type": "npm",
+			"script": "test",
+			"path": "code/controllers/ProcessScheduler/",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "npm: test - code/controllers/ProcessScheduler",
+			"detail": "echo \"Error: no test specified\" && exit 1"
 		}
 	]
 }
