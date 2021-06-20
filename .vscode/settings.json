@@ -1,3 +1,16 @@
 {
-    "files.encoding": "windows1251"
+    "files.encoding": "windows1251",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/*.lnk": true
+    },
+    "explorerExclude.backup": null
 }

@@ -6,6 +6,12 @@
 	"configurations": [
 		{
 			"type": "byond",
+			"request": "attach",
+			"name": "Attach to Debugger",
+			"port": 2506 // 2448
+		},
+		{
+			"type": "byond",
 			"request": "launch",
 			"name": "Launch DreamSeeker",
 			"preLaunchTask": "Build All",
